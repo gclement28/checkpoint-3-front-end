@@ -18,7 +18,7 @@ export default function Home() {
   if (error) return <p>Error: {error.message}</p>;
 
   return (
-    <div className='countriesContainer'>
+    <div className='countries'>
       <h1>List of Countries</h1>
       <ul>
         {data.countries.map((country: any, index: number) => (

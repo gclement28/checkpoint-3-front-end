@@ -49,40 +49,45 @@ const AddCountryPage: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className='addCountry'>
       <h1>Add a Country</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor='name'>Name:</label>
+          <label htmlFor='name'></label>
           <input
             type='text'
             id='name'
             value={name}
+            placeholder='name'
             onChange={(e) => setName(e.target.value)}
             required
           />
         </div>
         <div>
-          <label htmlFor='code'>Code:</label>
+          <label htmlFor='code'></label>
           <input
             type='text'
             id='code'
+            placeholder='Code:'
             value={code}
             onChange={(e) => setCode(e.target.value)}
             required
           />
         </div>
         <div>
-          <label htmlFor='emoji'>Emoji:</label>
+          <label htmlFor='emoji'></label>
           <input
             type='text'
             id='emoji'
+            placeholder='Emoji'
             value={emoji}
             onChange={(e) => setEmoji(e.target.value)}
             required
           />
         </div>
-        <button type='submit'>Add Country</button>
+        <button className='btn' type='submit'>
+          Add Country
+        </button>
       </form>
     </div>
   );
